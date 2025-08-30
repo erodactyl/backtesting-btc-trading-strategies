@@ -7,7 +7,7 @@ def load_bitcoin_data(filename: str) -> List[Dict]:
     """Load Bitcoin price data from CSV file."""
     data = []
     with open(filename, "r", encoding="utf-8-sig") as file:
-        reader = csv.DictReader(file, delimiter=";")
+        reader = csv.DictReader(file, delimiter=",")
         for row in reader:
             data.append(
                 {
